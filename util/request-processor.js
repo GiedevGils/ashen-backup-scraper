@@ -10,10 +10,10 @@ module.exports = {
   getPageContent,
 }
 
-async function getPageContent (url) {
+async function getPageContent (url, selector) {
   const response = await request(url)
 
-  return await parseHtml(response)
+  return await parseHtml(response, selector)
 }
 
 async function request (url) {
@@ -24,15 +24,15 @@ async function request (url) {
   })
 }
 
-async function parseHtml (res) {
+async function parseHtml (res, selector) {
   const resHtml = await res.text()
   const html = parse(resHtml)
 
-  const content = html.querySelector('.viewthread')
+  const content = html.querySelectorAll(selector)
 
-  if (content === null) {
-    throw new Error('page has no thread')
+  if (content.length === 0) {
+    throw new Error(`page has no elements with selector ${selector}`)
   }
 
-  return content.toString()
+  return content
 }

@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "scrape": "node index.js"
+    "backup": "node tools/backup/backup-threads.js",
+    "backup-dev": "nodemon tools/backup/backup-threads.js",
+    "tree": "node tools/tree-view/create-tree.js",
+    "tree-dev": "nodemon tools/tree-view/create-tree.js --ignore 'tools/tree-view/result.json'"
   },
   "author": "",
   "license": "ISC",

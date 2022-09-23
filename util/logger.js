@@ -1,4 +1,5 @@
 const interval = setInterval(() => {
+  console.log('------------')
   console.timeLog('duration')
   console.log(`doing page: ${page.name}`)
   console.log(`done so far: ${done}`)

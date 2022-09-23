@@ -1,8 +1,8 @@
 const fs = require('fs')
 
-const pages = require('./input/pages.js')
-const { updateCurrentPage, startLog, endLog, addToDone } = require('./util/logger.js')
-const { getPageContent } = require('./util/request-processor.js')
+const pages = require('./pages.js')
+const { updateCurrentPage, startLog, endLog, addToDone } = require('../../util/logger.js')
+const { getPageContent } = require('../../util/request-processor.js')
 
 main()
 
@@ -16,10 +16,10 @@ async function main () {
 
     console.log(`doing thread | ${name} - pgs: ${numberOfPages}`)
 
-    await fs.mkdirSync(`output/${name}`, { recursive: true })
+    await fs.mkdirSync(`./tools/backup/output/${name}`, { recursive: true })
 
     for (let idx = 1; idx <= numberOfPages; idx++) {
-      const path = `output/${name}/page-${idx}.html`
+      const path = `./tools/backup/output/${name}/page-${idx}.html`
 
       if (fs.existsSync(path) && idx !== numberOfPages) { // if it is the same page, re-get it for the fact that posts might have been updated
         addToDone()
@@ -27,12 +27,12 @@ async function main () {
       }
 
       try {
-        const content = await getPageContent(`${url}/page/${idx}`)
+        const content = await getPageContent(`${url}/page/${idx}`, '.viewthread')
 
-        fs.writeFileSync(path, content)
+        fs.writeFileSync(path, content[0].toString()) // should be only 1 element with class threadview
       } catch (err) {
         console.error(`error at ${name}, ${idx}`)
-        fs.appendFileSync('output/fails.txt', `${new Date().toISOString()} | ${name}, ${idx} (${url}) | ${err.message}\n`)
+        fs.appendFileSync('backup-fails.txt', `${new Date().toISOString()} | ${name}, ${idx} (${url}) | ${err.message}\n`)
       }
 
       addToDone()
