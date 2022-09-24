@@ -11,6 +11,7 @@ module.exports = {
 }
 
 async function getPageContent (url, selector) {
+  if (!url || !selector) throw new Error('missing param in getPageContent call')
   const response = await request(url)
 
   return await parseHtml(response, selector)
