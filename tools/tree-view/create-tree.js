@@ -4,14 +4,13 @@ const { parse } = require('date-fns')
 const { getPageContent } = require('../../util/request-processor')
 
 const prefix = 'https://theashenchapter.enjin.com'
-const forums = require('./forums')
 
 main()
 
 async function main () {
   const ashenChapter = {}
 
-  const coreForums = await getPageContent(prefix, '.forum-name')
+  const coreForums = await getPageContent(prefix, '.forum-name') // get initial pages
 
   await loopForums(ashenChapter, coreForums.map(node => ({ name: node.innerText.trim(), url: `${node.attrs.href}` })))
 
