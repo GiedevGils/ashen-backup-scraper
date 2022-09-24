@@ -8,6 +8,7 @@ const prefix = 'https://theashenchapter.enjin.com'
 main()
 
 async function main () {
+  console.time('totalTime')
   const ashenChapter = []
 
   const coreForums = await getPageContent(prefix, '.forum-name') // get initial pages
@@ -15,10 +16,12 @@ async function main () {
   await loopForums(ashenChapter, coreForums.map(node => ({ name: node.innerText.trim(), url: `${node.attrs.href}` })))
 
   fs.writeFileSync('tools/tree-view/result.json', JSON.stringify(ashenChapter, null, 2))
+  console.timeEnd('totalTime')
 }
 
 async function loopForums (parent, forums) {
   for (const forum of forums) {
+    console.timeLog('totalTime')
     const threads = []
     let pageForums = []
     const subForums = []
@@ -65,6 +68,7 @@ async function loopForums (parent, forums) {
           name: node.innerText.trim(),
           url: `${prefix}${node.attrs.href}`,
           by: node.parentNode.querySelector('.by')?.querySelector('.element_username')?.innerText,
+          nrOfPosts: node.parentNode.parentNode.querySelector('.replies')?.innerText.trim(),
           on: parse(node.parentNode.attrs['data-lastposttime'], 'MMM d, yy', new Date()),
         })),
       subForums,
