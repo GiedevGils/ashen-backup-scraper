@@ -7,7 +7,10 @@
     "backup": "node tools/backup/backup-threads.js",
     "backup-dev": "nodemon tools/backup/backup-threads.js",
     "tree": "node tools/tree-view/create-tree.js",
-    "tree-dev": "nodemon tools/tree-view/create-tree.js --ignore 'tools/tree-view/result.json'"
+    "tree-dev": "nodemon tools/tree-view/create-tree.js --ignore 'tools/tree-view/result.json'",
+    "generate-webpage-dev": "nodemon tools/tree-view/generate-webpage.js",
+    "duplicate": "node tools/header-duplication/duplicate.js",
+    "prettify": "node tools/prettify-backup/prettify.js"
   },
   "author": "",
   "license": "ISC",
@@ -21,6 +24,7 @@
   "dependencies": {
     "date-fns": "^2.29.3",
     "dotenv": "^16.0.2",
+    "jsdom": "^20.0.0",
     "node-fetch": "^2.6.7",
     "node-html-parser": "^6.1.0",
     "nunjucks": "^3.2.3"
