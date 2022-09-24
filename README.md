@@ -26,3 +26,7 @@ Get a structure tree of all threads on the forums
 2. For each forum, go to the link and get all subforums (recursive)
 3. For all subforums, get all threads (also on later pages)
 4. For each thread, get the name of the thread, when it was posted, by who, and the URL
+
+## header-duplication
+
+Tool that duplicates relevant stylesheets and places them to the local filesystem. This means that they can be used later to prettify the pages.

@@ -1,6 +1,7 @@
-{
-  "Battle for Tyria": {
-    "url": "/home/m/8190140/viewforum/10065724",
+[
+  {
+    "name": "Battle for Tyria",
+    "url": "https://theashenchapter.enjin.com/home/m/8190140/viewforum/10065724",
     "threads": [
       {
         "name": "Individual Stories for Individual Heroes",
@@ -81,10 +82,11 @@
         "on": "2021-09-06T22:00:00.000Z"
       }
     ],
-    "subForums": {}
+    "subForums": []
   },
-  "Announcements": {
-    "url": "/home/m/8190140/viewforum/6384174",
+  {
+    "name": "Announcements",
+    "url": "https://theashenchapter.enjin.com/home/m/8190140/viewforum/6384174",
     "threads": [
       {
         "name": "Individual Stories for Individual Heroes",
@@ -309,10 +311,11 @@
         "on": "2017-02-02T23:00:00.000Z"
       }
     ],
-    "subForums": {}
+    "subForums": []
   },
-  "Guild Rules &amp; Player Resources": {
-    "url": "/home/m/8190140/viewforum/2525544",
+  {
+    "name": "Guild Rules &amp; Player Resources",
+    "url": "https://theashenchapter.enjin.com/home/m/8190140/viewforum/2525544",
     "threads": [
       {
         "name": "Individual Stories for Individual Heroes",
@@ -501,9 +504,10 @@
         "on": "2012-10-01T22:00:00.000Z"
       }
     ],
-    "subForums": {
-      "Manuals &amp; Compendiums.": {
-        "url": "/home/m/8190140/viewforum/9697660",
+    "subForums": [
+      {
+        "name": "Manuals &amp; Compendiums.",
+        "url": "https://theashenchapter.enjin.com/home/m/8190140/viewforum/9697660",
         "threads": [
           {
             "name": "Individual Stories for Individual Heroes",
@@ -554,12 +558,13 @@
             "on": "2015-08-17T22:00:00.000Z"
           }
         ],
-        "subForums": {}
+        "subForums": []
       }
-    }
+    ]
   },
-  "Vigil Keep": {
-    "url": "/home/m/8190140/viewforum/1773500",
+  {
+    "name": "Vigil Keep",
+    "url": "https://theashenchapter.enjin.com/home/m/8190140/viewforum/1773500",
     "threads": [
       {
         "name": "Individual Stories for Individual Heroes",
@@ -580,9 +585,10 @@
         "on": "2021-08-04T22:00:00.000Z"
       }
     ],
-    "subForums": {
-      "Events": {
-        "url": "/home/m/8190140/viewforum/1773501",
+    "subForums": [
+      {
+        "name": "Events",
+        "url": "https://theashenchapter.enjin.com/home/m/8190140/viewforum/1773501",
         "threads": [
           {
             "name": "Individual Stories for Individual Heroes",
@@ -597,10 +603,11 @@
             "on": null
           }
         ],
-        "subForums": {}
+        "subForums": []
       },
-      "Field Reports": {
-        "url": "/home/m/8190140/viewforum/4508719",
+      {
+        "name": "Field Reports",
+        "url": "https://theashenchapter.enjin.com/home/m/8190140/viewforum/4508719",
         "threads": [
           {
             "name": "Individual Stories for Individual Heroes",
@@ -681,10 +688,11 @@
             "on": "2018-05-26T22:00:00.000Z"
           }
         ],
-        "subForums": {}
+        "subForums": []
       },
-      "Notices": {
-        "url": "/home/m/8190140/viewforum/6061324",
+      {
+        "name": "Notices",
+        "url": "https://theashenchapter.enjin.com/home/m/8190140/viewforum/6061324",
         "threads": [
           {
             "name": "Individual Stories for Individual Heroes",
@@ -747,10 +755,11 @@
             "on": "2020-12-17T23:00:00.000Z"
           }
         ],
-        "subForums": {}
+        "subForums": []
       },
-      "Letterbox": {
-        "url": "/home/m/8190140/viewforum/6009038",
+      {
+        "name": "Letterbox",
+        "url": "https://theashenchapter.enjin.com/home/m/8190140/viewforum/6009038",
         "threads": [
           {
             "name": "Individual Stories for Individual Heroes",
@@ -777,10 +786,11 @@
             "on": "2022-03-23T23:00:00.000Z"
           }
         ],
-        "subForums": {}
+        "subForums": []
       },
-      "Character Bios": {
-        "url": "/home/m/8190140/viewforum/1773506",
+      {
+        "name": "Character Bios",
+        "url": "https://theashenchapter.enjin.com/home/m/8190140/viewforum/1773506",
         "threads": [
           {
             "name": "Individual Stories for Individual Heroes",
@@ -1011,9 +1021,10 @@
             "on": "2014-07-11T22:00:00.000Z"
           }
         ],
-        "subForums": {
-          "Character Bios, Non-TACH": {
-            "url": "/home/m/8190140/viewforum/2298501",
+        "subForums": [
+          {
+            "name": "Character Bios, Non-TACH",
+            "url": "https://theashenchapter.enjin.com/home/m/8190140/viewforum/2298501",
             "threads": [
               {
                 "name": "Individual Stories for Individual Heroes",
@@ -1304,10 +1315,11 @@
                 "on": "2013-02-12T23:00:00.000Z"
               }
             ],
-            "subForums": {}
+            "subForums": []
           },
-          "Character Bios, Archives": {
-            "url": "/home/m/8190140/viewforum/3422702",
+          {
+            "name": "Character Bios, Archives",
+            "url": "https://theashenchapter.enjin.com/home/m/8190140/viewforum/3422702",
             "threads": [
               {
                 "name": "Individual Stories for Individual Heroes",
@@ -2770,12 +2782,13 @@
                 "on": null
               }
             ],
-            "subForums": {}
+            "subForums": []
           }
-        }
+        ]
       },
-      "Vigil Service Records": {
-        "url": "/home/m/8190140/viewforum/4356310",
+      {
+        "name": "Vigil Service Records",
+        "url": "https://theashenchapter.enjin.com/home/m/8190140/viewforum/4356310",
         "threads": [
           {
             "name": "Individual Stories for Individual Heroes",
@@ -3258,10 +3271,11 @@
             "on": "2014-05-14T22:00:00.000Z"
           }
         ],
-        "subForums": {}
+        "subForums": []
       },
-      "Journals": {
-        "url": "/home/m/8190140/viewforum/6009040",
+      {
+        "name": "Journals",
+        "url": "https://theashenchapter.enjin.com/home/m/8190140/viewforum/6009040",
         "threads": [
           {
             "name": "Individual Stories for Individual Heroes",
@@ -4140,10 +4154,11 @@
             "on": "2013-06-13T22:00:00.000Z"
           }
         ],
-        "subForums": {}
+        "subForums": []
       },
-      "Library": {
-        "url": "/home/m/8190140/viewforum/1791176",
+      {
+        "name": "Library",
+        "url": "https://theashenchapter.enjin.com/home/m/8190140/viewforum/1791176",
         "threads": [
           {
             "name": "Individual Stories for Individual Heroes",
@@ -4152,9 +4167,10 @@
             "on": "2021-09-13T22:00:00.000Z"
           }
         ],
-        "subForums": {
-          "Books &amp; Treatises": {
-            "url": "/home/m/8190140/viewforum/7447178",
+        "subForums": [
+          {
+            "name": "Books &amp; Treatises",
+            "url": "https://theashenchapter.enjin.com/home/m/8190140/viewforum/7447178",
             "threads": [
               {
                 "name": "Individual Stories for Individual Heroes",
@@ -4345,10 +4361,11 @@
                 "on": null
               }
             ],
-            "subForums": {}
+            "subForums": []
           },
-          "Vigil Service Record Archives": {
-            "url": "/home/m/8190140/viewforum/4747752",
+          {
+            "name": "Vigil Service Record Archives",
+            "url": "https://theashenchapter.enjin.com/home/m/8190140/viewforum/4747752",
             "threads": [
               {
                 "name": "Individual Stories for Individual Heroes",
@@ -5567,10 +5584,11 @@
                 "on": null
               }
             ],
-            "subForums": {}
+            "subForums": []
           },
-          "Vigil Operational Archives": {
-            "url": "/home/m/8190140/viewforum/2680413",
+          {
+            "name": "Vigil Operational Archives",
+            "url": "https://theashenchapter.enjin.com/home/m/8190140/viewforum/2680413",
             "threads": [
               {
                 "name": "Individual Stories for Individual Heroes",
@@ -5579,9 +5597,10 @@
                 "on": "2021-09-13T22:00:00.000Z"
               }
             ],
-            "subForums": {
-              "Basic Training Records.": {
-                "url": "/home/m/8190140/viewforum/2680453",
+            "subForums": [
+              {
+                "name": "Basic Training Records.",
+                "url": "https://theashenchapter.enjin.com/home/m/8190140/viewforum/2680453",
                 "threads": [
                   {
                     "name": "Individual Stories for Individual Heroes",
@@ -5908,10 +5927,11 @@
                     "on": "2013-01-25T23:00:00.000Z"
                   }
                 ],
-                "subForums": {}
+                "subForums": []
               },
-              "Archived / Unsorted Reports": {
-                "url": "/home/m/8190140/viewforum/8051527",
+              {
+                "name": "Archived / Unsorted Reports",
+                "url": "https://theashenchapter.enjin.com/home/m/8190140/viewforum/8051527",
                 "threads": [
                   {
                     "name": "Individual Stories for Individual Heroes",
@@ -6406,10 +6426,11 @@
                     "on": "2014-03-29T23:00:00.000Z"
                   }
                 ],
-                "subForums": {}
+                "subForums": []
               },
-              "Main Chapter: Operation Lychcroft.": {
-                "url": "/home/m/8190140/viewforum/4508784",
+              {
+                "name": "Main Chapter: Operation Lychcroft.",
+                "url": "https://theashenchapter.enjin.com/home/m/8190140/viewforum/4508784",
                 "threads": [
                   {
                     "name": "Individual Stories for Individual Heroes",
@@ -6430,10 +6451,11 @@
                     "on": "2012-09-25T22:00:00.000Z"
                   }
                 ],
-                "subForums": {}
+                "subForums": []
               },
-              "Main Chapter: Operation Bloodtide.": {
-                "url": "/home/m/8190140/viewforum/4508789",
+              {
+                "name": "Main Chapter: Operation Bloodtide.",
+                "url": "https://theashenchapter.enjin.com/home/m/8190140/viewforum/4508789",
                 "threads": [
                   {
                     "name": "Individual Stories for Individual Heroes",
@@ -6502,10 +6524,11 @@
                     "on": "2012-09-30T22:00:00.000Z"
                   }
                 ],
-                "subForums": {}
+                "subForums": []
               },
-              "Main Chapter: Operation Peace Treaty.": {
-                "url": "/home/m/8190140/viewforum/4508792",
+              {
+                "name": "Main Chapter: Operation Peace Treaty.",
+                "url": "https://theashenchapter.enjin.com/home/m/8190140/viewforum/4508792",
                 "threads": [
                   {
                     "name": "Individual Stories for Individual Heroes",
@@ -6568,10 +6591,11 @@
                     "on": "2012-10-23T22:00:00.000Z"
                   }
                 ],
-                "subForums": {}
+                "subForums": []
               },
-              "Main Chapter: Operation Shatter.": {
-                "url": "/home/m/8190140/viewforum/4508794",
+              {
+                "name": "Main Chapter: Operation Shatter.",
+                "url": "https://theashenchapter.enjin.com/home/m/8190140/viewforum/4508794",
                 "threads": [
                   {
                     "name": "Individual Stories for Individual Heroes",
@@ -6658,10 +6682,11 @@
                     "on": "2012-11-14T23:00:00.000Z"
                   }
                 ],
-                "subForums": {}
+                "subForums": []
               },
-              "Main Chapter: Operation Forestheart.": {
-                "url": "/home/m/8190140/viewforum/4508807",
+              {
+                "name": "Main Chapter: Operation Forestheart.",
+                "url": "https://theashenchapter.enjin.com/home/m/8190140/viewforum/4508807",
                 "threads": [
                   {
                     "name": "Individual Stories for Individual Heroes",
@@ -6736,10 +6761,11 @@
                     "on": "2012-12-10T23:00:00.000Z"
                   }
                 ],
-                "subForums": {}
+                "subForums": []
               },
-              "Main Chapter: Operation Pact.": {
-                "url": "/home/m/8190140/viewforum/4508812",
+              {
+                "name": "Main Chapter: Operation Pact.",
+                "url": "https://theashenchapter.enjin.com/home/m/8190140/viewforum/4508812",
                 "threads": [
                   {
                     "name": "Individual Stories for Individual Heroes",
@@ -6868,10 +6894,11 @@
                     "on": "2013-01-05T23:00:00.000Z"
                   }
                 ],
-                "subForums": {}
+                "subForums": []
               },
-              "Main Chapter: Operation Inquest Bane.": {
-                "url": "/home/m/8190140/viewforum/4508814",
+              {
+                "name": "Main Chapter: Operation Inquest Bane.",
+                "url": "https://theashenchapter.enjin.com/home/m/8190140/viewforum/4508814",
                 "threads": [
                   {
                     "name": "Individual Stories for Individual Heroes",
@@ -6994,10 +7021,11 @@
                     "on": "2013-02-05T23:00:00.000Z"
                   }
                 ],
-                "subForums": {}
+                "subForums": []
               },
-              "Main Chapter: Operation Bulwark.": {
-                "url": "/home/m/8190140/viewforum/2743771",
+              {
+                "name": "Main Chapter: Operation Bulwark.",
+                "url": "https://theashenchapter.enjin.com/home/m/8190140/viewforum/2743771",
                 "threads": [
                   {
                     "name": "Individual Stories for Individual Heroes",
@@ -7084,10 +7112,11 @@
                     "on": "2013-03-13T23:00:00.000Z"
                   }
                 ],
-                "subForums": {}
+                "subForums": []
               },
-              "Main Chapter: Operation Dawnstar.": {
-                "url": "/home/m/8190140/viewforum/2743770",
+              {
+                "name": "Main Chapter: Operation Dawnstar.",
+                "url": "https://theashenchapter.enjin.com/home/m/8190140/viewforum/2743770",
                 "threads": [
                   {
                     "name": "Individual Stories for Individual Heroes",
@@ -7204,10 +7233,11 @@
                     "on": "2013-04-09T22:00:00.000Z"
                   }
                 ],
-                "subForums": {}
+                "subForums": []
               },
-              "Main Chapter: Operation Dragonbane.": {
-                "url": "/home/m/8190140/viewforum/2743772",
+              {
+                "name": "Main Chapter: Operation Dragonbane.",
+                "url": "https://theashenchapter.enjin.com/home/m/8190140/viewforum/2743772",
                 "threads": [
                   {
                     "name": "Individual Stories for Individual Heroes",
@@ -7342,10 +7372,11 @@
                     "on": "2013-05-24T22:00:00.000Z"
                   }
                 ],
-                "subForums": {}
+                "subForums": []
               },
-              "Main Chapter: Operation Vigilance.": {
-                "url": "/home/m/8190140/viewforum/2885355",
+              {
+                "name": "Main Chapter: Operation Vigilance.",
+                "url": "https://theashenchapter.enjin.com/home/m/8190140/viewforum/2885355",
                 "threads": [
                   {
                     "name": "Individual Stories for Individual Heroes",
@@ -7558,10 +7589,11 @@
                     "on": "2013-08-16T22:00:00.000Z"
                   }
                 ],
-                "subForums": {}
+                "subForums": []
               },
-              "Main Chapter: Operation Skybreak.": {
-                "url": "/home/m/8190140/viewforum/3468099",
+              {
+                "name": "Main Chapter: Operation Skybreak.",
+                "url": "https://theashenchapter.enjin.com/home/m/8190140/viewforum/3468099",
                 "threads": [
                   {
                     "name": "Individual Stories for Individual Heroes",
@@ -7642,10 +7674,11 @@
                     "on": "2013-11-16T23:00:00.000Z"
                   }
                 ],
-                "subForums": {}
+                "subForums": []
               },
-              "Main Chapter: Operation Howling Storm.": {
-                "url": "/home/m/8190140/viewforum/3716855",
+              {
+                "name": "Main Chapter: Operation Howling Storm.",
+                "url": "https://theashenchapter.enjin.com/home/m/8190140/viewforum/3716855",
                 "threads": [
                   {
                     "name": "Individual Stories for Individual Heroes",
@@ -7924,10 +7957,11 @@
                     "on": "2014-01-05T23:00:00.000Z"
                   }
                 ],
-                "subForums": {}
+                "subForums": []
               },
-              "Main Chapter: Operation Liberating Lion.": {
-                "url": "/home/m/8190140/viewforum/4117275",
+              {
+                "name": "Main Chapter: Operation Liberating Lion.",
+                "url": "https://theashenchapter.enjin.com/home/m/8190140/viewforum/4117275",
                 "threads": [
                   {
                     "name": "Individual Stories for Individual Heroes",
@@ -8062,10 +8096,11 @@
                     "on": "2014-02-27T23:00:00.000Z"
                   }
                 ],
-                "subForums": {}
+                "subForums": []
               },
-              "Main Chapter: Operation Mourning Edge.": {
-                "url": "/home/m/8190140/viewforum/4508767",
+              {
+                "name": "Main Chapter: Operation Mourning Edge.",
+                "url": "https://theashenchapter.enjin.com/home/m/8190140/viewforum/4508767",
                 "threads": [
                   {
                     "name": "Individual Stories for Individual Heroes",
@@ -8356,10 +8391,11 @@
                     "on": "2014-06-15T22:00:00.000Z"
                   }
                 ],
-                "subForums": {}
+                "subForums": []
               },
-              "Main Chapter: Operation Awakening.": {
-                "url": "/home/m/8190140/viewforum/4508773",
+              {
+                "name": "Main Chapter: Operation Awakening.",
+                "url": "https://theashenchapter.enjin.com/home/m/8190140/viewforum/4508773",
                 "threads": [
                   {
                     "name": "Individual Stories for Individual Heroes",
@@ -8578,10 +8614,11 @@
                     "on": "2014-09-18T22:00:00.000Z"
                   }
                 ],
-                "subForums": {}
+                "subForums": []
               },
-              "Main Chapter: Operation Stormwalker.": {
-                "url": "/home/m/8190140/viewforum/5098294",
+              {
+                "name": "Main Chapter: Operation Stormwalker.",
+                "url": "https://theashenchapter.enjin.com/home/m/8190140/viewforum/5098294",
                 "threads": [
                   {
                     "name": "Individual Stories for Individual Heroes",
@@ -8770,10 +8807,11 @@
                     "on": "2014-11-25T23:00:00.000Z"
                   }
                 ],
-                "subForums": {}
+                "subForums": []
               },
-              "Main Chapter: Operation Resurge.": {
-                "url": "/home/m/8190140/viewforum/5502418",
+              {
+                "name": "Main Chapter: Operation Resurge.",
+                "url": "https://theashenchapter.enjin.com/home/m/8190140/viewforum/5502418",
                 "threads": [
                   {
                     "name": "Individual Stories for Individual Heroes",
@@ -9064,10 +9102,11 @@
                     "on": "2015-02-11T23:00:00.000Z"
                   }
                 ],
-                "subForums": {}
+                "subForums": []
               },
-              "Main Chapter: Operation Sanctum.": {
-                "url": "/home/m/8190140/viewforum/5988310",
+              {
+                "name": "Main Chapter: Operation Sanctum.",
+                "url": "https://theashenchapter.enjin.com/home/m/8190140/viewforum/5988310",
                 "threads": [
                   {
                     "name": "Individual Stories for Individual Heroes",
@@ -9370,10 +9409,11 @@
                     "on": "2015-06-09T22:00:00.000Z"
                   }
                 ],
-                "subForums": {}
+                "subForums": []
               },
-              "Main Chapter: Operation Eternal Dawn.": {
-                "url": "/home/m/8190140/viewforum/5098295",
+              {
+                "name": "Main Chapter: Operation Eternal Dawn.",
+                "url": "https://theashenchapter.enjin.com/home/m/8190140/viewforum/5098295",
                 "threads": [
                   {
                     "name": "Individual Stories for Individual Heroes",
@@ -9784,10 +9824,11 @@
                     "on": "2015-09-20T22:00:00.000Z"
                   }
                 ],
-                "subForums": {}
+                "subForums": []
               },
-              "Main Chapter: Operation Horizon.": {
-                "url": "/home/m/8190140/viewforum/6895746",
+              {
+                "name": "Main Chapter: Operation Horizon.",
+                "url": "https://theashenchapter.enjin.com/home/m/8190140/viewforum/6895746",
                 "threads": [
                   {
                     "name": "Individual Stories for Individual Heroes",
@@ -10084,10 +10125,11 @@
                     "on": "2016-02-28T23:00:00.000Z"
                   }
                 ],
-                "subForums": {}
+                "subForums": []
               },
-              "Main Chapter: Operation Bleeding Edge.": {
-                "url": "/home/m/8190140/viewforum/7336662",
+              {
+                "name": "Main Chapter: Operation Bleeding Edge.",
+                "url": "https://theashenchapter.enjin.com/home/m/8190140/viewforum/7336662",
                 "threads": [
                   {
                     "name": "Individual Stories for Individual Heroes",
@@ -10264,10 +10306,11 @@
                     "on": "2016-07-03T22:00:00.000Z"
                   }
                 ],
-                "subForums": {}
+                "subForums": []
               },
-              "Main Chapter: Operation Blazing Lands.": {
-                "url": "/home/m/8190140/viewforum/7559695",
+              {
+                "name": "Main Chapter: Operation Blazing Lands.",
+                "url": "https://theashenchapter.enjin.com/home/m/8190140/viewforum/7559695",
                 "threads": [
                   {
                     "name": "Individual Stories for Individual Heroes",
@@ -10756,10 +10799,11 @@
                     "on": "2016-09-15T22:00:00.000Z"
                   }
                 ],
-                "subForums": {}
+                "subForums": []
               },
-              "Main Chapter: Operation Penitent.": {
-                "url": "/home/m/8190140/viewforum/8172311",
+              {
+                "name": "Main Chapter: Operation Penitent.",
+                "url": "https://theashenchapter.enjin.com/home/m/8190140/viewforum/8172311",
                 "threads": [
                   {
                     "name": "Individual Stories for Individual Heroes",
@@ -11146,10 +11190,11 @@
                     "on": "2017-03-28T22:00:00.000Z"
                   }
                 ],
-                "subForums": {}
+                "subForums": []
               },
-              "Main Chapter: Operation Ashfall": {
-                "url": "/home/m/8190140/viewforum/8591119",
+              {
+                "name": "Main Chapter: Operation Ashfall",
+                "url": "https://theashenchapter.enjin.com/home/m/8190140/viewforum/8591119",
                 "threads": [
                   {
                     "name": "Individual Stories for Individual Heroes",
@@ -11284,10 +11329,11 @@
                     "on": "2017-08-14T22:00:00.000Z"
                   }
                 ],
-                "subForums": {}
+                "subForums": []
               },
-              "Main Chapter: Operation Sunspear": {
-                "url": "/home/m/8190140/viewforum/8591120",
+              {
+                "name": "Main Chapter: Operation Sunspear",
+                "url": "https://theashenchapter.enjin.com/home/m/8190140/viewforum/8591120",
                 "threads": [
                   {
                     "name": "Individual Stories for Individual Heroes",
@@ -11914,10 +11960,11 @@
                     "on": "2017-09-29T22:00:00.000Z"
                   }
                 ],
-                "subForums": {}
+                "subForums": []
               },
-              "Main Chapter: Operation Vanguard.": {
-                "url": "/home/m/8190140/viewforum/9100816",
+              {
+                "name": "Main Chapter: Operation Vanguard.",
+                "url": "https://theashenchapter.enjin.com/home/m/8190140/viewforum/9100816",
                 "threads": [
                   {
                     "name": "Individual Stories for Individual Heroes",
@@ -12046,10 +12093,11 @@
                     "on": "2018-05-13T22:00:00.000Z"
                   }
                 ],
-                "subForums": {}
+                "subForums": []
               },
-              "Main Chapter: Operation Atonement.": {
-                "url": "/home/m/8190140/viewforum/9208795",
+              {
+                "name": "Main Chapter: Operation Atonement.",
+                "url": "https://theashenchapter.enjin.com/home/m/8190140/viewforum/9208795",
                 "threads": [
                   {
                     "name": "Individual Stories for Individual Heroes",
@@ -12244,10 +12292,11 @@
                     "on": "2018-06-17T22:00:00.000Z"
                   }
                 ],
-                "subForums": {}
+                "subForums": []
               },
-              "Main Chapter: Operation Peacekeeper": {
-                "url": "/home/m/8190140/viewforum/9342043",
+              {
+                "name": "Main Chapter: Operation Peacekeeper",
+                "url": "https://theashenchapter.enjin.com/home/m/8190140/viewforum/9342043",
                 "threads": [
                   {
                     "name": "Individual Stories for Individual Heroes",
@@ -12304,10 +12353,11 @@
                     "on": "2018-10-27T22:00:00.000Z"
                   }
                 ],
-                "subForums": {}
+                "subForums": []
               },
-              "Main Chapter: Operation Sovereign": {
-                "url": "/home/m/8190140/viewforum/9431241",
+              {
+                "name": "Main Chapter: Operation Sovereign",
+                "url": "https://theashenchapter.enjin.com/home/m/8190140/viewforum/9431241",
                 "threads": [
                   {
                     "name": "Individual Stories for Individual Heroes",
@@ -12436,10 +12486,11 @@
                     "on": "2019-01-05T23:00:00.000Z"
                   }
                 ],
-                "subForums": {}
+                "subForums": []
               },
-              "Main Chapter: Operation Retribution": {
-                "url": "/home/m/8190140/viewforum/9423293",
+              {
+                "name": "Main Chapter: Operation Retribution",
+                "url": "https://theashenchapter.enjin.com/home/m/8190140/viewforum/9423293",
                 "threads": [
                   {
                     "name": "Individual Stories for Individual Heroes",
@@ -12520,10 +12571,11 @@
                     "on": "2019-05-05T22:00:00.000Z"
                   }
                 ],
-                "subForums": {}
+                "subForums": []
               },
-              "Main Chapter: Operation Refit": {
-                "url": "/home/m/8190140/viewforum/9654413",
+              {
+                "name": "Main Chapter: Operation Refit",
+                "url": "https://theashenchapter.enjin.com/home/m/8190140/viewforum/9654413",
                 "threads": [
                   {
                     "name": "Individual Stories for Individual Heroes",
@@ -12592,10 +12644,11 @@
                     "on": "2019-08-09T22:00:00.000Z"
                   }
                 ],
-                "subForums": {}
+                "subForums": []
               },
-              "Main Chapter: Operation Bastion": {
-                "url": "/home/m/8190140/viewforum/9703262",
+              {
+                "name": "Main Chapter: Operation Bastion",
+                "url": "https://theashenchapter.enjin.com/home/m/8190140/viewforum/9703262",
                 "threads": [
                   {
                     "name": "Individual Stories for Individual Heroes",
@@ -12682,10 +12735,11 @@
                     "on": "2019-10-21T22:00:00.000Z"
                   }
                 ],
-                "subForums": {}
+                "subForums": []
               },
-              "Main Chapter: Operation Lionhead": {
-                "url": "/home/m/8190140/viewforum/9778407",
+              {
+                "name": "Main Chapter: Operation Lionhead",
+                "url": "https://theashenchapter.enjin.com/home/m/8190140/viewforum/9778407",
                 "threads": [
                   {
                     "name": "Individual Stories for Individual Heroes",
@@ -12772,10 +12826,11 @@
                     "on": "2020-02-09T23:00:00.000Z"
                   }
                 ],
-                "subForums": {}
+                "subForums": []
               },
-              "Main Chapter: Operation Farshore": {
-                "url": "/home/m/8190140/viewforum/9858843",
+              {
+                "name": "Main Chapter: Operation Farshore",
+                "url": "https://theashenchapter.enjin.com/home/m/8190140/viewforum/9858843",
                 "threads": [
                   {
                     "name": "Individual Stories for Individual Heroes",
@@ -12838,10 +12893,11 @@
                     "on": "2020-05-03T22:00:00.000Z"
                   }
                 ],
-                "subForums": {}
+                "subForums": []
               },
-              "Main Chapter: Operation Glacier": {
-                "url": "/home/m/8190140/viewforum/9893511",
+              {
+                "name": "Main Chapter: Operation Glacier",
+                "url": "https://theashenchapter.enjin.com/home/m/8190140/viewforum/9893511",
                 "threads": [
                   {
                     "name": "Individual Stories for Individual Heroes",
@@ -12982,10 +13038,11 @@
                     "on": "2020-07-12T22:00:00.000Z"
                   }
                 ],
-                "subForums": {}
+                "subForums": []
               },
-              "Main Chapter: Operation Cinder": {
-                "url": "/home/m/8190140/viewforum/9981491",
+              {
+                "name": "Main Chapter: Operation Cinder",
+                "url": "https://theashenchapter.enjin.com/home/m/8190140/viewforum/9981491",
                 "threads": [
                   {
                     "name": "Individual Stories for Individual Heroes",
@@ -13126,10 +13183,11 @@
                     "on": "2021-01-03T23:00:00.000Z"
                   }
                 ],
-                "subForums": {}
+                "subForums": []
               },
-              "Main Chapter: Operation Unity": {
-                "url": "/home/m/8190140/viewforum/10047396",
+              {
+                "name": "Main Chapter: Operation Unity",
+                "url": "https://theashenchapter.enjin.com/home/m/8190140/viewforum/10047396",
                 "threads": [
                   {
                     "name": "Individual Stories for Individual Heroes",
@@ -13192,10 +13250,11 @@
                     "on": "2021-06-20T22:00:00.000Z"
                   }
                 ],
-                "subForums": {}
+                "subForums": []
               },
-              "Main Chapter: Operation Warfront": {
-                "url": "/home/m/8190140/viewforum/10068952",
+              {
+                "name": "Main Chapter: Operation Warfront",
+                "url": "https://theashenchapter.enjin.com/home/m/8190140/viewforum/10068952",
                 "threads": [
                   {
                     "name": "Individual Stories for Individual Heroes",
@@ -13318,10 +13377,11 @@
                     "on": "2021-08-16T22:00:00.000Z"
                   }
                 ],
-                "subForums": {}
+                "subForums": []
               },
-              "Main Chapter: Operation Resurgence": {
-                "url": "/home/m/8190140/viewforum/10119670",
+              {
+                "name": "Main Chapter: Operation Resurgence",
+                "url": "https://theashenchapter.enjin.com/home/m/8190140/viewforum/10119670",
                 "threads": [
                   {
                     "name": "Individual Stories for Individual Heroes",
@@ -13486,16 +13546,17 @@
                     "on": "2022-03-10T23:00:00.000Z"
                   }
                 ],
-                "subForums": {}
+                "subForums": []
               }
-            }
+            ]
           }
-        }
+        ]
       }
-    }
+    ]
   },
-  "Game Discussion": {
-    "url": "/home/m/8190140/viewforum/1773513",
+  {
+    "name": "Game Discussion",
+    "url": "https://theashenchapter.enjin.com/home/m/8190140/viewforum/1773513",
     "threads": [
       {
         "name": "Individual Stories for Individual Heroes",
@@ -14095,9 +14156,10 @@
         "on": null
       }
     ],
-    "subForums": {
-      "Lore": {
-        "url": "/home/m/8190140/viewforum/1773516",
+    "subForums": [
+      {
+        "name": "Lore",
+        "url": "https://theashenchapter.enjin.com/home/m/8190140/viewforum/1773516",
         "threads": [
           {
             "name": "Individual Stories for Individual Heroes",
@@ -14304,10 +14366,11 @@
             "on": "2012-10-03T22:00:00.000Z"
           }
         ],
-        "subForums": {}
+        "subForums": []
       },
-      "Out-Of-Character": {
-        "url": "/home/m/8190140/viewforum/1773507",
+      {
+        "name": "Out-Of-Character",
+        "url": "https://theashenchapter.enjin.com/home/m/8190140/viewforum/1773507",
         "threads": [
           {
             "name": "Individual Stories for Individual Heroes",
@@ -14591,10 +14654,11 @@
             "on": null
           }
         ],
-        "subForums": {}
+        "subForums": []
       },
-      "Screenshots": {
-        "url": "/home/m/8190140/viewforum/1773517",
+      {
+        "name": "Screenshots",
+        "url": "https://theashenchapter.enjin.com/home/m/8190140/viewforum/1773517",
         "threads": [
           {
             "name": "Individual Stories for Individual Heroes",
@@ -14807,10 +14871,11 @@
             "on": "2012-10-03T22:00:00.000Z"
           }
         ],
-        "subForums": {}
+        "subForums": []
       },
-      "Mechanics": {
-        "url": "/home/m/8190140/viewforum/7446807",
+      {
+        "name": "Mechanics",
+        "url": "https://theashenchapter.enjin.com/home/m/8190140/viewforum/7446807",
         "threads": [
           {
             "name": "Individual Stories for Individual Heroes",
@@ -15068,12 +15133,13 @@
             "on": null
           }
         ],
-        "subForums": {}
+        "subForums": []
       }
-    }
+    ]
   },
-  "General Discussions": {
-    "url": "/home/m/8190140/viewforum/1773387",
+  {
+    "name": "General Discussions",
+    "url": "https://theashenchapter.enjin.com/home/m/8190140/viewforum/1773387",
     "threads": [
       {
         "name": "Individual Stories for Individual Heroes",
@@ -16207,9 +16273,10 @@
         "on": null
       }
     ],
-    "subForums": {
-      "Site Suggestions": {
-        "url": "/home/m/8190140/viewforum/1773199",
+    "subForums": [
+      {
+        "name": "Site Suggestions",
+        "url": "https://theashenchapter.enjin.com/home/m/8190140/viewforum/1773199",
         "threads": [
           {
             "name": "Individual Stories for Individual Heroes",
@@ -16229,10 +16296,11 @@
             "on": null
           }
         ],
-        "subForums": {}
+        "subForums": []
       },
-      "Guild Suggestions": {
-        "url": "/home/m/8190140/viewforum/2296715",
+      {
+        "name": "Guild Suggestions",
+        "url": "https://theashenchapter.enjin.com/home/m/8190140/viewforum/2296715",
         "threads": [
           {
             "name": "Individual Stories for Individual Heroes",
@@ -16480,12 +16548,13 @@
             "on": null
           }
         ],
-        "subForums": {}
+        "subForums": []
       }
-    }
+    ]
   },
-  "Arrivals and Departures": {
-    "url": "/home/m/8190140/viewforum/1773464",
+  {
+    "name": "Arrivals and Departures",
+    "url": "https://theashenchapter.enjin.com/home/m/8190140/viewforum/1773464",
     "threads": [
       {
         "name": "Individual Stories for Individual Heroes",
@@ -18918,10 +18987,11 @@
         "on": "2012-11-05T23:00:00.000Z"
       }
     ],
-    "subForums": {}
+    "subForums": []
   },
-  "Other Games": {
-    "url": "/home/m/8190140/viewforum/1773466",
+  {
+    "name": "Other Games",
+    "url": "https://theashenchapter.enjin.com/home/m/8190140/viewforum/1773466",
     "threads": [
       {
         "name": "Individual Stories for Individual Heroes",
@@ -19512,10 +19582,11 @@
         "on": "2012-09-26T22:00:00.000Z"
       }
     ],
-    "subForums": {}
+    "subForums": []
   },
-  "Art Corner": {
-    "url": "/home/m/8190140/viewforum/1807535",
+  {
+    "name": "Art Corner",
+    "url": "https://theashenchapter.enjin.com/home/m/8190140/viewforum/1807535",
     "threads": [
       {
         "name": "Individual Stories for Individual Heroes",
@@ -19614,9 +19685,10 @@
         "on": "2012-12-29T23:00:00.000Z"
       }
     ],
-    "subForums": {
-      "Stories": {
-        "url": "/home/m/8190140/viewforum/1807537",
+    "subForums": [
+      {
+        "name": "Stories",
+        "url": "https://theashenchapter.enjin.com/home/m/8190140/viewforum/1807537",
         "threads": [
           {
             "name": "Individual Stories for Individual Heroes",
@@ -19889,10 +19961,11 @@
             "on": "2012-10-09T22:00:00.000Z"
           }
         ],
-        "subForums": {}
+        "subForums": []
       },
-      "Poetry": {
-        "url": "/home/m/8190140/viewforum/1807538",
+      {
+        "name": "Poetry",
+        "url": "https://theashenchapter.enjin.com/home/m/8190140/viewforum/1807538",
         "threads": [
           {
             "name": "Individual Stories for Individual Heroes",
@@ -19949,10 +20022,11 @@
             "on": "2012-10-31T23:00:00.000Z"
           }
         ],
-        "subForums": {}
+        "subForums": []
       },
-      "Drawing, Painting, 3D Modeling &amp; More": {
-        "url": "/home/m/8190140/viewforum/1807540",
+      {
+        "name": "Drawing, Painting, 3D Modeling &amp; More",
+        "url": "https://theashenchapter.enjin.com/home/m/8190140/viewforum/1807540",
         "threads": [
           {
             "name": "Individual Stories for Individual Heroes",
@@ -20297,8 +20371,8 @@
             "on": "2012-11-07T23:00:00.000Z"
           }
         ],
-        "subForums": {}
+        "subForums": []
       }
-    }
+    ]
   }
-}
+]

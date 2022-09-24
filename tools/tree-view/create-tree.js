@@ -8,7 +8,7 @@ const prefix = 'https://theashenchapter.enjin.com'
 main()
 
 async function main () {
-  const ashenChapter = {}
+  const ashenChapter = []
 
   const coreForums = await getPageContent(prefix, '.forum-name') // get initial pages
 
@@ -21,7 +21,7 @@ async function loopForums (parent, forums) {
   for (const forum of forums) {
     const threads = []
     let pageForums = []
-    const subForums = {}
+    const subForums = []
     const url = `${prefix}${forum.url}`
 
     let loopThreads = true
@@ -57,8 +57,9 @@ async function loopForums (parent, forums) {
       throw e
     }
 
-    parent[forum.name] = {
-      url: forum.url,
+    parent.push({
+      name: forum.name,
+      url: forum.url[0] === 'h' ? forum.url : url, // lazy. check if https is already in front of the url. if not, take the url used to send requests.
       threads: threads.map(node => (
         {
           name: node.innerText.trim(),
@@ -67,6 +68,6 @@ async function loopForums (parent, forums) {
           on: parse(node.parentNode.attrs['data-lastposttime'], 'MMM d, yy', new Date()),
         })),
       subForums,
-    }
+    })
   }
 }
