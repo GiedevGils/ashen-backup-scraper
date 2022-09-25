@@ -1,27 +1,41 @@
 const fs = require('fs')
 
-const pages = require('./pages.js')
 const { updateCurrentPage, startLog, endLog, addToDone } = require('../../util/logger.js')
 const { getPageContent } = require('../../util/request-processor.js')
+const path = require('path')
 
 main()
 
 async function main () {
-  startLog(pages.reduce((x, y) => x + y.numberOfPages, 0))
+  const pages = JSON.parse(fs.readFileSync(path.join(__dirname, './forum.json')))
+
+  startLog(-1)
+
+  fs.cpSync(path.join(__dirname, '../tree-view/result.json'), path.join(__dirname, './forum.json'))
+  const outputPath = path.join(__dirname, './output')
 
   for (const page of pages) {
-    const { name, url, numberOfPages } = page
+    backup(outputPath, page)
+  }
 
-    updateCurrentPage(page)
+  endLog()
+}
 
-    console.log(`doing thread | ${name} - pgs: ${numberOfPages}`)
+async function backup (parentPath, forum) {
+  for (const thread of forum.threads) {
+    console.log(thread.name)
+    const { name, url, nrOfPosts } = thread
 
-    await fs.mkdirSync(`./tools/backup/output/${name}`, { recursive: true })
+    updateCurrentPage(thread)
 
-    for (let idx = 1; idx <= numberOfPages; idx++) {
-      const path = `./tools/backup/output/${name}/page-${idx}.html`
+    console.log(`doing thread | ${name} - pgs: ${nrOfPosts}`)
 
-      if (fs.existsSync(path) && idx !== numberOfPages) { // if it is the same page, re-get it for the fact that posts might have been updated
+    await fs.mkdirSync(parentPath, { recursive: true })
+
+    for (let idx = 1; idx <= nrOfPosts; idx++) {
+      const path = `${parentPath}/${name.toLowerCase().replace(' ', '_')}/page-${idx}.html`
+
+      if (fs.existsSync(path) && idx !== nrOfPosts) { // if it is the same page, re-get it for the fact that posts might have been updated
         addToDone()
         continue
       }
@@ -38,6 +52,4 @@ async function main () {
       addToDone()
     }
   }
-
-  endLog()
 }
