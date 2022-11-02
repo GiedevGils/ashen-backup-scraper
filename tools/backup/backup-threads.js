@@ -22,7 +22,7 @@ async function main () {
 }
 
 async function backup (parentPath, forum) {
-  const forumPath = `${parentPath}/${forum.name.toLowerCase().replaceAll(' ', '-')}`
+  const forumPath = `${parentPath}/${format(forum.name)}`
 
   fs.mkdirSync(forumPath, { recursive: true })
 
@@ -40,7 +40,7 @@ async function backup (parentPath, forum) {
     await fs.mkdirSync(forumPath, { recursive: true })
 
     for (let idx = 1; idx <= Math.ceil(nrOfPosts / 10); idx++) {
-      const path = `${forumPath}/${format(name).toLowerCase()}__${format(by)}`
+      const path = `${forumPath}/${format(name)}__${format(by)}`
       const filePath = `${path}/page-${idx}.html`
 
       fs.mkdirSync(path, { recursive: true })
