@@ -3,7 +3,6 @@ const fs = require('fs')
 const { updateCurrentPage, startLog, endLog, addToDone } = require('../../util/logger.js')
 const { getPageContent } = require('../../util/request-processor.js')
 const path = require('path')
-const { addStyles } = require('../prettify-backup/prettify.js')
 
 main()
 
@@ -54,10 +53,10 @@ async function backup (parentPath, forum) {
       try {
         const content = await getPageContent(`${url}/page/${idx}`, '.row')
 
-        fs.writeFileSync(filePath, content.toString()) // todo fix add styles
+        fs.writeFileSync(filePath, content.toString())
       } catch (err) {
         console.error(`error at ${name}, ${idx}: ${err}`)
-        fs.appendFileSync('backup-fails.txt', `${new Date().toISOString()} | ${name}, ${idx} (${url}) | ${err.message}\n`)
+        fs.appendFileSync('tools/backup/backup-fails.txt', `${new Date().toISOString()} | ${name}, ${idx} (${url}) | ${err.message}\n`)
       }
 
       addToDone()
@@ -66,7 +65,16 @@ async function backup (parentPath, forum) {
 }
 
 function format (str) {
-  return (str + '').replace('/', '.').replaceAll(' ', '_').toLowerCase()
+  return (str + '')
+    .replaceAll(' ', '_')
+    .replaceAll('/', '.')
+    .replaceAll('\\', '..')
+    .replaceAll(':', '=')
+    .replaceAll('*', '+')
+    .replaceAll('?', ',,')
+    .replaceAll('"', ',')
+    .replaceAll('|', '...')
+    .toLowerCase()
 }
 
 function getCount (forums) {

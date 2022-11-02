@@ -18,6 +18,19 @@ It works by:
     3. It isolates the thread itself, to avoid headers, footers, and sidebars also being saved
     4. It saves that to the filesystem
 
+### Filename formatting
+Weird characters are replaced with a certain value of odd characters to be able to write to file system without issue:
+| character | replacement                             |
+| --------- | --------------------------------------- |
+| space     | `_` (less chance of weird interactions) |
+| `/`       | `.`                                     |
+| `\`       | `..`                                    |
+| `:`       | `=`                                     |
+| `*`       | `+`                                     |
+| `?`       | `,,`                                    |
+| `"`       | `,`                                     |
+| `|`       | `...`                                   |
+
 ## tree overview of forums and threads
 
 Get a structure tree of all threads on the forums
