@@ -22,7 +22,7 @@ async function upload (filepath, filename) {
 
     await client.uploadFrom(filepath, filename)
 
-    console.log('File uploaded to tach.ilthy.dev')
+    console.log(`${filename} uploaded to tach.ilthy.dev`)
   } catch (e) {
     console.log(e)
   }

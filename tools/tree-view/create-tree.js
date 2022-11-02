@@ -4,6 +4,7 @@ const { parse } = require('date-fns')
 const { getPageContent } = require('../../util/request-processor')
 
 const prefix = 'https://theashenchapter.enjin.com'
+const uniqueItems = new Set()
 
 main()
 
@@ -46,7 +47,16 @@ async function loopForums (parent, forums) {
           loopThreads = false
           break
         }
-        threads.push(...threadContent)
+
+        const nodes = threadContent.map(nodeMapper)
+
+        const filteredNodes = nodes.filter(node => !uniqueItems.has(node.name))
+
+        filteredNodes.forEach(node => {
+          uniqueItems.add(node.name)
+        })
+
+        threads.push(...filteredNodes)
         currentThread++
       }
 
@@ -63,15 +73,16 @@ async function loopForums (parent, forums) {
     parent.push({
       name: forum.name,
       url: forum.url[0] === 'h' ? forum.url : url, // lazy. check if https is already in front of the url. if not, take the url used to send requests.
-      threads: threads.map(node => (
-        {
-          name: node.innerText.trim(),
-          url: `${prefix}${node.attrs.href}`,
-          by: node.parentNode.querySelector('.by')?.querySelector('.element_username')?.innerText,
-          nrOfPosts: node.parentNode.parentNode.querySelector('.replies')?.innerText.trim(),
-          on: parse(node.parentNode.attrs['data-lastposttime'], 'MMM d, yy', new Date()),
-        })),
+      threads,
       subForums,
     })
   }
 }
+
+const nodeMapper = node => ({
+  name: node.innerText.trim().split('(')[0], // if ( 1 user viewing ) remove that from the name
+  url: `${prefix}${node.attrs.href}`,
+  by: node.parentNode.querySelector('.by')?.querySelector('.element_username')?.innerText,
+  nrOfPosts: node.parentNode.parentNode.querySelector('.replies')?.innerText.trim(),
+  on: parse(node.parentNode.attrs['data-lastposttime'], 'MMM d, yy', new Date()),
+})

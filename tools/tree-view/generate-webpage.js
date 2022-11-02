@@ -33,7 +33,6 @@ function generate () {
   fs.writeFileSync('tools/tree-view/tach-forum-tree.html', dom.serialize())
 
   upload('tools/tree-view/tach-forum-tree.html', 'forum.html')
-  upload('tools/tree-view/style.css', 'style.css')
 }
 
 function createElementsFromForum (forum, parent) {
