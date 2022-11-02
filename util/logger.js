@@ -1,7 +1,9 @@
+const { parseString } = require('./string')
+
 const interval = setInterval(() => {
   console.log('------------')
   console.timeLog('duration')
-  console.log(`doing page: ${page.name}`)
+  console.log(`doing page: ${parseString(page.name)}`)
   console.log(`done so far: ${done}`)
   console.log(`remaining: ${total - done}`)
   console.log('------------')
