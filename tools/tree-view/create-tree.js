@@ -84,11 +84,13 @@ const nodeMapper = node => {
   const forumName = node.textContent.trim()
   const name = parseString(forumName)
 
+  const by = parseString(node.parentNode.querySelector('.by')?.querySelector('.element_username')?.innerText)
+
   return {
     name,
     url: `${prefix}${node.attrs.href}`,
-    by: node.parentNode.querySelector('.by')?.querySelector('.element_username')?.innerText,
+    by,
     nrOfPosts: node.parentNode.parentNode.querySelector('.replies')?.innerText.trim(),
-    on: parse(node.parentNode.attrs['data-lastposttime'], 'MMM d, yy', new Date()),
+    on: parse(node.parentNode.attrs['data-time'], 'MMM d, yy', new Date()),
   }
 }

@@ -54,8 +54,8 @@ function createElementsFromForum (forum, parent) {
       const p = document.createElement('span')
 
       thLink.href = thread.url
-      thLink.innerHTML = thread.name
-      p.innerHTML = ` by ${thread.by} on ${format(new Date(thread.on), 'yyyy-MM-dd')}`
+      thLink.innerHTML = `${thread.name}`
+      p.innerHTML = ` | by: ${thread.by} | on: ${format(new Date(thread.on), 'yyyy-MM-dd')} | nr of posts: ${thread.nrOfPosts}`
       th.appendChild(thLink)
       th.appendChild(p)
 
