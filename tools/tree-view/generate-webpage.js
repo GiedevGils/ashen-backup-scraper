@@ -1,6 +1,7 @@
 const fs = require('fs')
 const { JSDOM } = require('jsdom')
 const format = require('date-fns/format')
+const { upload } = require('../../util/ftp')
 
 module.exports = {
   generate,
@@ -13,10 +14,9 @@ generate()
 function generate () {
   dom = new JSDOM('<!DOCTYPE html>')
   document = dom.window.document
-  const style = document.createElement('link')
+  const style = document.createElement('style')
 
-  style.rel = 'stylesheet'
-  style.href = './style.css'
+  style.innerHTML = fs.readFileSync('./tools/tree-view/style.css')
 
   document.head.appendChild(style)
 
@@ -31,6 +31,9 @@ function generate () {
   document.body.appendChild(ul)
 
   fs.writeFileSync('tools/tree-view/tach-forum-tree.html', dom.serialize())
+
+  upload('tools/tree-view/tach-forum-tree.html', 'forum.html')
+  upload('tools/tree-view/style.css', 'style.css')
 }
 
 function createElementsFromForum (forum, parent) {
