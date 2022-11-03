@@ -29,6 +29,7 @@ function extractData (page) {
 
     const postedString = post.querySelector('.posted').innerText
     const splits = postedString.split(' ')
+
     const postedDate = parse(`${splits[1]} ${splits[2]} ${splits[3]}`, 'MMM d, yy', new Date())
 
     const postVotes = post.querySelectorAll('.vote')

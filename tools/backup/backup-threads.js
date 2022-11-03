@@ -10,7 +10,7 @@ main()
 async function main () {
   const forums = JSON.parse(fs.readFileSync(path.join(__dirname, './forum.json')))
 
-  startLog(Math.ceil(getCount(forums, 0) / 10))
+  startLog(getCount(forums, 0))
 
   fs.cpSync(path.join(__dirname, '../tree-view/result.json'), path.join(__dirname, './forum.json'))
   const outputPath = path.join(__dirname, './output')
@@ -86,7 +86,7 @@ function getCount (forums) {
   for (const forum of forums) {
     for (const thread of forum.threads) {
       if (thread.nrOfPosts) {
-        count += +thread.nrOfPosts
+        count += Math.ceil(+thread.nrOfPosts / 10)
       }
     }
 
