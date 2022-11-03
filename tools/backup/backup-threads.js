@@ -1,43 +1,95 @@
 const fs = require('fs')
 
-const pages = require('./pages.js')
 const { updateCurrentPage, startLog, endLog, addToDone } = require('../../util/logger.js')
 const { getPageContent } = require('../../util/request-processor.js')
+const path = require('path')
 
 main()
 
 async function main () {
-  startLog(pages.reduce((x, y) => x + y.numberOfPages, 0))
+  const forums = JSON.parse(fs.readFileSync(path.join(__dirname, './forum.json')))
 
-  for (const page of pages) {
-    const { name, url, numberOfPages } = page
+  startLog(Math.ceil(getCount(forums, 0) / 10))
 
-    updateCurrentPage(page)
+  fs.cpSync(path.join(__dirname, '../tree-view/result.json'), path.join(__dirname, './forum.json'))
+  const outputPath = path.join(__dirname, './output')
 
-    console.log(`doing thread | ${name} - pgs: ${numberOfPages}`)
+  for (const forum of forums) {
+    await backup(outputPath, forum)
+  }
 
-    await fs.mkdirSync(`./tools/backup/output/${name}`, { recursive: true })
+  endLog()
+}
 
-    for (let idx = 1; idx <= numberOfPages; idx++) {
-      const path = `./tools/backup/output/${name}/page-${idx}.html`
+async function backup (parentPath, forum) {
+  const forumPath = `${parentPath}/${format(forum.name)}`
 
-      if (fs.existsSync(path) && idx !== numberOfPages) { // if it is the same page, re-get it for the fact that posts might have been updated
+  fs.mkdirSync(forumPath, { recursive: true })
+
+  for (const subForum of forum.subForums) {
+    await backup(forumPath, subForum)
+  }
+
+  for (const thread of forum.threads) {
+    const { name, url, nrOfPosts, by } = thread
+
+    updateCurrentPage(thread)
+
+    console.log(`doing thread | ${name} - pgs: ${Math.ceil(nrOfPosts / 10)}`)
+
+    await fs.mkdirSync(forumPath, { recursive: true })
+
+    for (let idx = 1; idx <= Math.ceil(nrOfPosts / 10); idx++) {
+      const path = `${forumPath}/${format(name)}__${format(by)}`
+      const filePath = `${path}/page-${idx}.html`
+
+      fs.mkdirSync(path, { recursive: true })
+
+      if (fs.existsSync(filePath) && idx !== nrOfPosts) { // if it is the same page, re-get it for the fact that posts might have been updated
         addToDone()
         continue
       }
 
       try {
-        const content = await getPageContent(`${url}/page/${idx}`, '.viewthread')
+        const content = await getPageContent(`${url}/page/${idx}`, '.row')
 
-        fs.writeFileSync(path, content[0].toString()) // should be only 1 element with class threadview
+        fs.writeFileSync(filePath, content.toString())
       } catch (err) {
-        console.error(`error at ${name}, ${idx}`)
-        fs.appendFileSync('backup-fails.txt', `${new Date().toISOString()} | ${name}, ${idx} (${url}) | ${err.message}\n`)
+        console.error(`error at ${name}, ${idx}: ${err}`)
+        fs.appendFileSync('tools/backup/backup-fails.txt', `${new Date().toISOString()} | ${name}, ${idx} (${url}) | ${err.message}\n`)
       }
 
       addToDone()
     }
   }
+}
 
-  endLog()
+function format (str) {
+  return (str + '')
+    .replaceAll(' ', '_')
+    .replaceAll('/', '.')
+    .replaceAll('\\', '..')
+    .replaceAll(':', '=')
+    .replaceAll('*', '+')
+    .replaceAll('?', ',,')
+    .replaceAll('"', ',')
+    .replaceAll('|', '...')
+    .toLowerCase()
+}
+
+function getCount (forums) {
+  let count = 0
+
+  for (const forum of forums) {
+    for (const thread of forum.threads) {
+      if (thread.nrOfPosts) {
+        count += +thread.nrOfPosts
+      }
+    }
+
+    if (forum.subForums.length > 0) {
+      count += getCount(forum.subForums)
+    }
+  }
+  return count
 }
