@@ -1,0 +1,80 @@
+body {
+  color: white;
+  background-color: #383838;
+}
+
+img {
+  max-width: 20em;
+}
+
+.date {
+  color: lightgrey;
+}
+
+.row {
+  display: inline-table;
+}
+
+.content,
+.author-cell {
+  padding: 1em;
+  display: table-cell;
+  box-shadow:
+    1px 0 0 0 #888,
+    0 1px 0 0 #888,
+    1px 1px 0 0 #888,
+    1px 0 0 0 #888 inset,
+    0 1px 0 0 #888 inset;
+
+}
+
+.author {
+  font-weight: bolder;
+}
+
+.votes {
+  font-style: italic;
+}
+
+.emojione {
+  max-width: 1em;
+}
+
+.author-cell {
+  vertical-align: top;
+  min-width: 14em;
+}
+
+.content {
+  width: 100%;
+}
+
+/* enjin table */
+table,
+th,
+td {
+  border: 1px solid;
+  border-collapse: collapse;
+  padding: 0.3em;
+}
+
+.bbcode_spoiler {
+  border-left: 3px solid dimgray;
+  border-radius: 1%;
+}
+
+.bbcode_spoiler_title {
+  padding: 0.5em 0em 0.5em 0.5em;
+  margin-left: 0.5em;
+  font-weight: 100;
+}
+
+.bbcode_spoiler_toggle {
+  display: none;
+}
+
+.bbcode_spoiler_content {
+  display: block !important;
+  margin-left: 0.5em;
+  margin-bottom: 0.5em;
+}

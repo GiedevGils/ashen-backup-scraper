@@ -3,6 +3,7 @@ const fs = require('fs')
 const { updateCurrentPage, startLog, endLog, addToDone } = require('../../util/logger.js')
 const { getPageContent } = require('../../util/request-processor.js')
 const path = require('path')
+const { extractRelevantInformation } = require('../prettify-backup/prettify.js')
 
 main()
 
@@ -53,7 +54,9 @@ async function backup (parentPath, forum) {
       try {
         const content = await getPageContent(`${url}/page/${idx}`, '.row')
 
-        fs.writeFileSync(filePath, content.toString())
+        const prettified = extractRelevantInformation(content)
+
+        fs.writeFileSync(filePath, prettified)
       } catch (err) {
         console.error(`error at ${name}, ${idx}: ${err}`)
         fs.appendFileSync('tools/backup/backup-fails.txt', `${new Date().toISOString()} | ${name}, ${idx} (${url}) | ${err.message}\n`)

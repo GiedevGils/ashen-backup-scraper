@@ -82,15 +82,21 @@ async function loopForums (parent, forums) {
 
 const nodeMapper = node => {
   const forumName = node.textContent.trim()
-  const name = parseString(forumName)
+  let name = parseString(forumName)
+
+  if (name.endsWith('.')) {
+    name = name.split('.')[0]
+  }
 
   const by = parseString(node.parentNode.querySelector('.by')?.querySelector('.element_username')?.innerText)
+
+  const replies = +node.parentNode.parentNode.querySelector('.replies')?.innerText.trim()
 
   return {
     name,
     url: `${prefix}${node.attrs.href}`,
     by,
-    nrOfPosts: node.parentNode.parentNode.querySelector('.replies')?.innerText.trim(),
+    nrOfPosts: replies === 0 ? 1 : replies,
     on: parse(node.parentNode.attrs['data-time'], 'MMM d, yy', new Date()),
   }
 }
