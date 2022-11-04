@@ -11,7 +11,7 @@
     "tree-dev": "nodemon tools/tree-view/create-tree.js --ignore 'tools/tree-view/result.json'",
     "generate-webpage": "node tools/tree-view/generate-webpage.js",
     "generate-webpage-dev": "nodemon tools/tree-view/generate-webpage.js",
-    "total-backup": "npm run tree-public && npm run backup"
+    "total-backup": "sh full-backup.sh"
   },
   "author": "",
   "license": "ISC",
