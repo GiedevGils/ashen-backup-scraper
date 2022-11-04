@@ -10,7 +10,6 @@
     "tree-public": "node tools/tree-view/create-tree.js && node tools/tree-view/generate-webpage.js",
     "tree-dev": "nodemon tools/tree-view/create-tree.js --ignore 'tools/tree-view/result.json'",
     "generate-webpage-dev": "nodemon tools/tree-view/generate-webpage.js",
-    "duplicate": "node tools/header-duplication/duplicate.js",
     "total-backup": "npm run tree-public && cp ./tools/tree-view/result.json ./tools/backup/forum.json && npm run backup"
   },
   "author": "",
