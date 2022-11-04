@@ -3,6 +3,8 @@
 today=$(date +"%Y-%m-%d")
 startTime=$(date +"%Y-%m-%d %T")
 
+npm run tree-public
+npm run backup
 
 endTime=$(date +"%Y-%m-%d %T")
 
