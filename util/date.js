@@ -1,4 +1,4 @@
-const { parse, previousMonday, previousTuesday, previousWednesday, previousThursday, previousFriday, previousSaturday, previousSunday } = require('date-fns')
+const { parse, previousMonday, previousTuesday, previousWednesday, previousThursday, previousFriday, previousSaturday, previousSunday, subHours } = require('date-fns')
 
 const lastDayFunctions = {
   Mon: previousMonday,
@@ -10,36 +10,39 @@ const lastDayFunctions = {
   Sun: previousSunday,
 }
 
+const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+const days = Object.keys(lastDayFunctions)
+
 const formatEnjinDateToDateObject = dateString => {
   let toReturn
 
-  const splits = dateString.split(' ')
+  const splits = removeLinebreaks(dateString).split(' ')
+  const dayMonthOrHour = splits[1]
+  const potentialHours = splits[2]
 
-  toReturn = parse(`${splits[1]} ${splits[2]} ${splits[3]}`, 'MMM d, yy', new Date())
+  if (months.includes(dayMonthOrHour)) {
+    toReturn = parse(`${splits[1]} ${splits[2]} ${splits[3]}`, 'MMM d, yy', new Date())
+  }
+
+  if (days.includes(dayMonthOrHour)) {
+    toReturn = getLastX(dayMonthOrHour)
+    const [hours, minutes] = splits[3].split(':')
+
+    toReturn.setHours(hours)
+    toReturn.setMinutes(minutes)
+    toReturn.setSeconds(0)
+  }
+
+  if (potentialHours.includes('hours')) {
+    toReturn = subHours(new Date(), dayMonthOrHour)
+    toReturn.setSeconds(0)
+  }
 
   try {
     toReturn.toISOString()
   } catch (e) {
-    if (e.message.toLowerCase().includes('invalid time')) {
-      const day = splits[1]
-
-      toReturn = getLastX(day)
-
-      const [hours, minutes] = splits[3].split(':')
-
-      toReturn.setHours(hours)
-      toReturn.setMinutes(minutes)
-      toReturn.setSeconds(0)
-
-      try {
-        toReturn.toISOString()
-      } catch (e) {
-        console.log(e)
-        throw e
-      }
-    } else {
-      throw e
-    }
+    console.error(e.message)
+    return undefined
   }
 
   return toReturn
@@ -51,6 +54,14 @@ const formatEnjinDateToDateObject = dateString => {
  */
 function getLastX (day) {
   return lastDayFunctions[day](new Date())
+}
+
+/**
+ * @param {string} string
+ * @returns {string}
+ */
+function removeLinebreaks (string) {
+  return string.replaceAll('\n', '').trim()
 }
 
 module.exports = {
