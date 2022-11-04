@@ -11,7 +11,7 @@ endTime=$(date +"%Y-%m-%d %T")
 git add .
 git commit -m "backup $today" -m "start: $startTime -- end: $endTime"
 
-git tag v$startTime
+git tag "v$startTime"
 
 git push
 
