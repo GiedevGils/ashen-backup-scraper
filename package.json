@@ -9,8 +9,9 @@
     "tree": "node tools/tree-view/create-tree.js",
     "tree-public": "node tools/tree-view/create-tree.js && node tools/tree-view/generate-webpage.js",
     "tree-dev": "nodemon tools/tree-view/create-tree.js --ignore 'tools/tree-view/result.json'",
+    "generate-webpage": "node tools/tree-view/generate-webpage.js",
     "generate-webpage-dev": "nodemon tools/tree-view/generate-webpage.js",
-    "total-backup": "npm run tree-public && cp ./tools/tree-view/result.json ./tools/backup/forum.json && npm run backup"
+    "total-backup": "npm run tree-public && npm run backup"
   },
   "author": "",
   "license": "ISC",
