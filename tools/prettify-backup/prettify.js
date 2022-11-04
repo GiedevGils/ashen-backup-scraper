@@ -1,15 +1,16 @@
 const fs = require('fs')
 const { JSDOM } = require('jsdom')
-const { parse } = require('date-fns')
+const { formatEnjinDateToDateObject } = require('../../util/date')
 
 module.exports = {
   extractRelevantInformation,
 }
 
-function extractRelevantInformation (page) {
-  const data = extractData(page)
+function extractRelevantInformation (page, pageUrl) {
+  const json = extractData(page)
+  const html = prettifyData(json, pageUrl)
 
-  return prettifyData(data)
+  return [json, html]
 }
 
 /**
@@ -28,9 +29,7 @@ function extractData (page) {
     const content = post.querySelector('.post-content').innerHTML.trim()
 
     const postedString = post.querySelector('.posted').innerText
-    const splits = postedString.split(' ')
-
-    const postedDate = parse(`${splits[1]} ${splits[2]} ${splits[3]}`, 'MMM d, yy', new Date())
+    const postedDate = formatEnjinDateToDateObject(postedString)
 
     const postVotes = post.querySelectorAll('.vote')
 
@@ -75,10 +74,24 @@ function extractData (page) {
  *  posted: Date
  * }[]} pageData
  */
-function prettifyData (pageData) {
+function prettifyData (pageData, pageUrl) {
   const dom = new JSDOM('<!DOCTYPE html>')
 
   const document = dom.window.document
+  const url = document.createElement('div')
+  const link = document.createElement('a')
+  const linkText = document.createElement('p')
+
+  url.className = 'url'
+
+  link.href = pageUrl
+  link.target = '_blank'
+
+  linkText.innerHTML = pageUrl
+
+  link.appendChild(linkText)
+  url.appendChild(link)
+
   const table = document.createElement('div')
 
   table.className = 'table'
@@ -103,8 +116,13 @@ function prettifyData (pageData) {
     content.innerHTML = post.content
     content.className = 'content'
 
-    date.innerHTML = `on: ${post.posted.toISOString()}`
-    date.className = 'date'
+    try {
+      date.innerHTML = `on: ${post.posted.toISOString()}`
+      date.className = 'date'
+    } catch (e) {
+      console.log(e)
+      throw e
+    }
 
     post.votes.forEach(vote => {
       const p = document.createElement('p')
@@ -131,6 +149,7 @@ function prettifyData (pageData) {
   style.innerHTML = fs.readFileSync('tools/prettify-backup/style.css')
 
   document.head.appendChild(style)
+  document.body.appendChild(url)
   document.body.appendChild(table)
 
   return dom.serialize()

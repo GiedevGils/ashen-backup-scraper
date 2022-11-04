@@ -42,21 +42,25 @@ async function backup (parentPath, forum) {
 
     for (let idx = 1; idx <= Math.ceil(nrOfPosts / 10); idx++) {
       const path = `${forumPath}/${format(name)}__${format(by)}`
-      const filePath = `${path}/page-${idx}.html`
+      const filePath = `${path}/page-${idx}`
+      const pageUrl = `${url}/page/${idx}`
 
       fs.mkdirSync(path, { recursive: true })
 
-      if (fs.existsSync(filePath) && idx !== nrOfPosts) { // if it is the same page, re-get it for the fact that posts might have been updated
+      const exists = fs.existsSync(`${filePath}.html`) && fs.existsSync(`${filePath}.json`)
+
+      if (exists && idx !== nrOfPosts) { // if it is the same page, re-get it for the fact that posts might have been updated
         addToDone()
         continue
       }
 
       try {
-        const content = await getPageContent(`${url}/page/${idx}`, '.row')
+        const content = await getPageContent(pageUrl, '.row')
 
-        const prettified = extractRelevantInformation(content)
+        const [json, html] = extractRelevantInformation(content, pageUrl)
 
-        fs.writeFileSync(filePath, prettified)
+        fs.writeFileSync(`${filePath}.json`, JSON.stringify(json, null, 2))
+        fs.writeFileSync(`${filePath}.html`, html)
       } catch (err) {
         console.error(`error at ${name}, ${idx}: ${err}`)
         fs.appendFileSync('tools/backup/backup-fails.txt', `${new Date().toISOString()} | ${name}, ${idx} (${url}) | ${err.message}\n`)
