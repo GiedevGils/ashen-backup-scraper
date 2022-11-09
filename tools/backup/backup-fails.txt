@@ -1,1 +1,6 @@
 2022-11-07T14:00:00.078Z | Ema's Inactivity, 1 (https://theashenchapter.enjin.com/home/m/8190140/viewthread/24854119-emas-inactivity) | page has no elements with selector .row
+2022-11-09T13:43:13.198Z | Alcarth Yongriff, 1 (https://theashenchapter.enjin.com/home/m/8190140/viewthread/15681163-alcarth-yongriff) | page has no elements with selector .row
+2022-11-09T13:43:13.407Z | Keg Harm, 1 (https://theashenchapter.enjin.com/home/m/8190140/viewthread/15387088-keg-harm) | page has no elements with selector .row
+2022-11-09T13:43:23.783Z | Glint Redflail, 1 (https://theashenchapter.enjin.com/home/m/8190140/viewthread/8689352-glint-redflail) | page has no elements with selector .row
+2022-11-09T13:43:24.600Z | Sylvor Reeve, 1 (https://theashenchapter.enjin.com/home/m/8190140/viewthread/7298943-sylvor-reeve) | page has no elements with selector .row
+2022-11-09T13:43:26.761Z | Corinne Darkbow, 1 (https://theashenchapter.enjin.com/home/m/8190140/viewthread/6664646-corinne-darkbow) | page has no elements with selector .row
