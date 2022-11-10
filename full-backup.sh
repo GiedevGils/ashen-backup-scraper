@@ -12,7 +12,7 @@ git add .
 git commit -m "backup $today" -m "start: $startTime -- end: $endTime"
 git push
 
-git tag "v$startTime"
+git tag "v$today"
 git push --tags
 
 
