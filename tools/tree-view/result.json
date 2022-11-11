@@ -697,6 +697,13 @@
         "url": "https://theashenchapter.enjin.com/home/m/8190140/viewforum/4508719",
         "threads": [
           {
+            "name": "Medical reports",
+            "url": "https://theashenchapter.enjin.com/home/m/8190140/viewthread/29709585-medical-reports",
+            "by": "golopolo",
+            "nrOfPosts": 1153,
+            "on": "2017-02-24T23:00:00.000Z"
+          },
+          {
             "name": "Quartermaster Logbook",
             "url": "https://theashenchapter.enjin.com/home/m/8190140/viewthread/29968719-quartermaster-logbook",
             "by": "OhNoBluescreen",
@@ -716,13 +723,6 @@
             "by": "Alleshia Willhem",
             "nrOfPosts": 248,
             "on": "2014-12-04T23:00:00.000Z"
-          },
-          {
-            "name": "Medical reports",
-            "url": "https://theashenchapter.enjin.com/home/m/8190140/viewthread/29709585-medical-reports",
-            "by": "golopolo",
-            "nrOfPosts": 1152,
-            "on": "2017-02-24T23:00:00.000Z"
           },
           {
             "name": "Medical Checkup Reports",
@@ -791,7 +791,7 @@
             "name": "Chapter Notices",
             "url": "https://theashenchapter.enjin.com/home/m/8190140/viewthread/22789972-chapter-notices",
             "by": "Alleshia Willhem",
-            "nrOfPosts": 1011,
+            "nrOfPosts": 1012,
             "on": "2015-06-27T22:00:00.000Z"
           },
           {
