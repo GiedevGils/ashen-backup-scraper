@@ -4,3 +4,4 @@
 2022-11-09T13:43:23.783Z | Glint Redflail, 1 (https://theashenchapter.enjin.com/home/m/8190140/viewthread/8689352-glint-redflail) | page has no elements with selector .row
 2022-11-09T13:43:24.600Z | Sylvor Reeve, 1 (https://theashenchapter.enjin.com/home/m/8190140/viewthread/7298943-sylvor-reeve) | page has no elements with selector .row
 2022-11-09T13:43:26.761Z | Corinne Darkbow, 1 (https://theashenchapter.enjin.com/home/m/8190140/viewthread/6664646-corinne-darkbow) | page has no elements with selector .row
+2022-11-18T15:21:59.056Z | The Fact Thread, 1374 (https://theashenchapter.enjin.com/home/m/8190140/viewthread/6930939-fact-thread) | Cannot read properties of undefined (reading 'toISOString')
