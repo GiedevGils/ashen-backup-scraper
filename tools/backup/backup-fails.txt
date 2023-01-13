@@ -5,3 +5,4 @@
 2022-11-09T13:43:24.600Z | Sylvor Reeve, 1 (https://theashenchapter.enjin.com/home/m/8190140/viewthread/7298943-sylvor-reeve) | page has no elements with selector .row
 2022-11-09T13:43:26.761Z | Corinne Darkbow, 1 (https://theashenchapter.enjin.com/home/m/8190140/viewthread/6664646-corinne-darkbow) | page has no elements with selector .row
 2022-11-18T15:21:59.056Z | The Fact Thread, 1374 (https://theashenchapter.enjin.com/home/m/8190140/viewthread/6930939-fact-thread) | Cannot read properties of undefined (reading 'toISOString')
+2023-01-13T15:27:13.935Z | The Fact Thread, 1381 (https://theashenchapter.enjin.com/home/m/8190140/viewthread/6930939-fact-thread) | Cannot read properties of undefined (reading 'toISOString')
